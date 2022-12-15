@@ -5,7 +5,7 @@ import './App.css';
 function App() {
   const [count, setCount] = useState(0);
 
-  return <div className="App">Travel Blog Here we come!</div>;
+  return <div className="App">Travel Blog Here we come! On Chrome book!</div>;
 }
 
 export default App;
