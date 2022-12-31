@@ -5,9 +5,7 @@ import './App.css';
 import { ReactLeafletWaypoints } from 'react-leaflet-waypoints';
 import { styled } from '@mui/material';
 
-function App() {
-  const [count, setCount] = useState(0);
-
+export const App = () => {
   return (
     <div className="App">
       <Map
@@ -19,9 +17,7 @@ function App() {
       />
     </div>
   );
-}
-
-export default App;
+};
 
 const Map = styled(ReactLeafletWaypoints)`
   width: 500px;
