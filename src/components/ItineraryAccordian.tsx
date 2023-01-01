@@ -7,8 +7,8 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 interface Itinerary {
   startPointLat: string;
   startPointLng: string;
-  endpointLat: string;
-  endpointLng: string;
+  endPointLat: string;
+  endPointLng: string;
   title: string;
   description: string;
 }

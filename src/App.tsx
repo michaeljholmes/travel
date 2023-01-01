@@ -4,7 +4,7 @@ import { ReactLeafletWaypoints } from 'react-leaflet-waypoints';
 import { styled } from '@mui/material';
 import { Map } from './components/Map';
 import { CustomAppBar } from './components/AppBar';
-import { ItineraryAccordion } from './components/ItineraryAccordion';
+import { ItineraryAccordion } from './components/ItineraryAccordian';
 
 export const App = () => {
   return (
@@ -15,6 +15,10 @@ export const App = () => {
           {
             title: 'place 1',
             description: 'Some desc',
+            startPointLat: '',
+            startPointLng: '',
+            endPointLat: '',
+            endPointLng: '',
           },
         ]}
       />
