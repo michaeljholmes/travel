@@ -1,21 +1,22 @@
 import { ReactLeafletWaypoints } from 'react-leaflet-waypoints';
 import { styled } from '@mui/material';
+import { rem } from 'polished';
+import { LatLng } from '../types';
 
-interface Waypoint {
-  lat: string;
-  lng: string;
-}
-
-interface MapProps {
+interface MapHeight {
   height?: string;
   width?: string;
-  waypoints?: Waypoint[];
 }
 
-export const Map = ({ waypoints }: MapProps) => (
+interface MapProps extends MapHeight{
+  waypoints?: LatLng[];
+}
+
+export const Map = ({ waypoints, ...rest }: MapProps) => (
   <WayPointMap
     layerUrl="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
     waypoints={waypoints}
+    {...rest}
     lineOptions={{
       styles: [
         {
@@ -26,7 +27,7 @@ export const Map = ({ waypoints }: MapProps) => (
   />
 );
 
-const WayPointMap = styled(ReactLeafletWaypoints)`
-  width: 500px;
-  height: 500px;
-`;
+const WayPointMap = styled(ReactLeafletWaypoints)<MapHeight>(({height, width}) => ({
+  height: height ?? rem(500),
+  width: width ?? rem(500)
+}));

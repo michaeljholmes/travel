@@ -19,7 +19,7 @@ export const CustomAppBar = () => {
       <AppBar>
         <Toolbar>
           <Typography variant="h6" component="div">
-            Scroll to hide App bar
+            Travels
           </Typography>
         </Toolbar>
       </AppBar>
